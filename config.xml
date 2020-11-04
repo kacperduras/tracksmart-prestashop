@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<module>
+	<name>tracksmart</name>
+	<displayName><![CDATA[TrackSmart]]></displayName>
+	<version><![CDATA[1.0.0]]></version>
+	<description>
+		<![CDATA[Module to enhanced tracking for Google Analytics 4 (via Google Tag Manager)]]>
+	</description>
+	<author><![CDATA[Kacper Duras]]></author>
+	<tab><![CDATA[analytics_stats]]></tab>
+	<is_configurable>1</is_configurable>
+	<need_instance>1</need_instance>
+</module>

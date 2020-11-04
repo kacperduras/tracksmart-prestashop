@@ -1,0 +1,18 @@
+os: linux
+language: php
+php: 7.1
+
+script: composer install
+before_deploy:
+  - mkdir tracksmart
+  - rsync -avr --exclude='tracksmart' * tracksmart
+  - zip -r tracksmart.zip tracksmart
+
+deploy:
+  provider: releases
+  api_key:
+    secure: "uXYDFqUCa02oZBPxka4i3likbfD2izKbV3AEV9wm9khST4o11aah5XzkkUR/tE42szCN9VlHmEBc6FtD/jxkHSeU5Zx7Z6lMjd1/p5UG7CpYKzHs2ma0Z8RlE4j7C0Uaj9Kkq3FBcp3UUl5KQGQhrTnE2iEsuTF0M6jETmcOLjV7aEH/lO0il0mQmKO89B8gIp7vj+pjvKs+oAIsxlqJepgxehCVY8dTBBqvkiYuVB6oe63oG6D8BxsmxtL4Qc6Lmk1FLleiX2O0zXnnpo7E/b1BUzg11yPy3E3MjC4yf5039JLfd6JcHfD9T67v2TYiar+LGXDhToPXuQSx024Y4ZCGNyOp33beSAna780sk9Cd4c2fiGwHtOAOdNkWFhZeQ0KxvbpNSo7O8ZZZ0D3RqTzU8pk/hCiFO6ozNg3cR43+40H0CVDq9XD4yOF73UvVDRW9tPN44V7L+7rc8uX0j6ROaTcZbQ5vhuNjXVFIVgti2kfRtOQXzg9hTcbB+NNVz2AQ/iwV7DGnd8Bs3zz/suJ98c5tUi1/tQxbswVD7Ph6T3oX1ZRO+0oQIZAu3RPXxvERZ5UUj/eWMk8PTCZEHGz8mLOjDyuwV4eQjvWP9QSsnF86JcK5E7njX8al3yZ9UxjHsBH4SuLxWbNuMIm0tGilJASWzAr3y/Z5RozngaA="
+  file: tracksmart.zip
+  skip_cleanup: true
+  on:
+    tags: true

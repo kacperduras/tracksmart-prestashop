@@ -1,0 +1,20 @@
+{
+  "name": "kacperduras/tracksmart-prestashop",
+  "description": "Module to enhanced tracking for Google Analytics 4 (via Google Tag Manager)",
+  "authors": [
+    {
+      "name": "Kacper Duras",
+      "email": "contact@kacperduras.pl"
+    }
+  ],
+  "require": {
+    "php": ">=7.1",
+    "ext-json": "*"
+  },
+  "config": {
+    "preferred-install": "dist",
+    "prepend-autoloader": false
+  },
+  "type": "prestashop-module",
+  "license": "GNU General Public License v3.0"
+}
