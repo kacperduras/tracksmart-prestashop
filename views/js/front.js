@@ -65,7 +65,7 @@ prestashop.on('updateCart', function(params)
                     }
                     else if (action === 'delete-from-cart')
                     {
-                        trackSmart.track('remove_from_cart', {
+                        trackSmart.process('remove_from_cart', {
                             'currency': prestashop.currency.iso_code,
                             'items': [ data ]
                         });
