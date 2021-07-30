@@ -33,13 +33,13 @@ TrackSmart.prototype.build = function()
         if (u !== null)
         {
             w[l].push({
-                'gtm.start': new Date().getTime(), event: 'sdk.js', user_id: u
+                'gtm.start': new Date().getTime(), event: 'gtm.js', user_id: u
             });
         }
         else
         {
             w[l].push({
-                'gtm.start': new Date().getTime(), event: 'sdk.js'
+                'gtm.start': new Date().getTime(), event: 'gtm.js'
             });
         }
 
